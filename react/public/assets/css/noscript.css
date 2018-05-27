@@ -1,0 +1,29 @@
+noscript {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  background: #fff;
+
+  padding: 150px 0;
+  text-align: center;
+
+  font: 20px Helvetica, sans-serif; color: #333;
+}
+
+noscript > :first-child {
+  display: inline-block;
+  text-align: left;
+}
+
+noscript > :first-child > h1,
+noscript > :first-child > h2,
+noscript > :first-child > h3,
+noscript > :first-child > h4,
+noscript > :first-child > h5,
+noscript > :first-child > h6 {
+  font-size: 40px;
+}
+
+noscript a { color: #dc8100; text-decoration: none; }
+noscript a:hover { color: #333; text-decoration: none; }

@@ -1,0 +1,21 @@
+{
+  "name": "dealerdata-node-backend",
+  "version": "0.1.0",
+  "description": "Node adaptation of the DealerData.org back-end",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha || true"
+  },
+  "author": "Dan Lindsey",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "chai": "^4.1.2",
+    "dotenv": "^5.0.1",
+    "mocha": "^5.1.1",
+    "ucfirst": "^1.0.0"
+  }
+}

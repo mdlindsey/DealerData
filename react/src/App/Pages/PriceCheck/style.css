@@ -1,0 +1,207 @@
+input,
+select {
+  margin: 15px;
+  padding: 15px;
+}
+
+h5 {
+  display: inline-block;
+  padding: 8px 15px;
+}
+
+
+
+.Dots {
+}
+
+.Dots span {
+  font-size: 5em;
+  line-height: 10px;
+  -webkit-animation-name: blink;
+          animation-name: blink;
+  -webkit-animation-duration: 1.4s;
+          animation-duration: 1.4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.Dots span:nth-child(2) {
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
+}
+
+.Dots span:nth-child(3) {
+  -webkit-animation-delay: .4s;
+          animation-delay: .4s;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: .2;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .2;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: .2;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .2;
+  }
+}
+
+
+.PriceChecker .Loading {
+  visibility: hidden;
+  position: relative;
+  z-index: 1;
+  top: 72px;
+
+  color: #212121;
+}
+
+.PriceChecker.loading input,
+.PriceChecker.loading select {
+  pointer-events: none; /* doesn't prevent tabbing into the input, but *basically* disables it */
+}
+
+.PriceChecker.loading > * { opacity: 0.3; }
+.PriceChecker.loading .Loading { visibility: visible; opacity: 1; }
+
+
+/* Style this however you like */
+
+.PricePointVisualizer {
+  display: inline-block;
+  margin: 0 10% 64px;
+  width: 80%;
+}
+
+.PricePointVisualizer * {
+  display: inline-block;
+  color: #eee;
+}
+
+.PricePointVisualizer--Min,
+.PricePointVisualizer--Avg,
+.PricePointVisualizer--Max {
+  padding: 15px 45px;
+  font-size: 22px;
+  text-align: center;
+}
+
+@media(max-width: 981px) {
+
+  .PricePointVisualizer--Min,
+  .PricePointVisualizer--Avg,
+  .PricePointVisualizer--Max {
+    padding: 12px 12px;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .PricePointVisualizer--Min *,
+  .PricePointVisualizer--Avg *,
+  .PricePointVisualizer--Max * {
+    padding: 0;
+    margin: 0;
+  }
+
+}
+
+
+.PricePointVisualizer--Min:before,
+.PricePointVisualizer--Avg:before,
+.PricePointVisualizer--Max:before{
+  display: block;
+  font-size: 0.65em;
+  color: #eee;
+}
+
+.PricePointVisualizer--Min:before { content: 'Minimum'; }
+.PricePointVisualizer--Avg:before { content: 'Average'; }
+.PricePointVisualizer--Max:before { content: 'Maximum'; }
+
+.PricePointVisualizer--Min {
+  background: #06ADDB;
+}
+
+.PricePointVisualizer--Avg {
+  background: #8160FB;
+}
+
+.PricePointVisualizer--Max {
+  background: #DB3406; /* lighter alternative: DB3406 */
+}
+
+.PricePointVisualizer--Min + .PricePointVisualizer--Dots {
+  border-color: #36a3f7;
+}
+
+.PricePointVisualizer--Avg + .PricePointVisualizer--Dots {
+  border-color: #8160FB;
+}
+
+.PricePointVisualizer--Dots {
+  border-bottom: dotted 4px;
+  position: relative;
+  margin: 0 5px;
+
+  top: -10px;
+
+  transition: all 0.33s ease;
+  -o-transition: all 0.33s ease;
+  -moz-transition: all 0.33s ease;
+  -webkit-transition: all 0.33s ease;
+}
+
+@media (max-width: 992px) {
+  .PricePointVisualizer--Dots { width: 0 !important; }
+}
+
+
+/*loader 2*/
+.bounce-loader  span {
+	display:inline-block;
+	height:32px;
+	width:32px;
+  margin: 0 8px;
+	border-radius:50%;
+	animation:bounce 1s ease-in infinite;
+}
+.bounce-loader span:first-child {
+	background: #06ADDB;
+	animation-delay:.7s;
+}
+.bounce-loader span:nth-child(2) {
+	background: #8160FB;
+	animation-delay:.3s;
+}
+.bounce-loader span:last-child {
+background: #DB3406;
+}
+@keyframes bounce {
+	0%{
+		transform:translateY(0);
+	}
+	30%{
+		transform:translateY(0);
+	}
+	50%{
+		transform:translateY(1rem);
+	}
+	100%{
+		transform:translateY(0);
+	}
+}
